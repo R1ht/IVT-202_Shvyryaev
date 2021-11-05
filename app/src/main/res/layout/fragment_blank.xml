@@ -6,9 +6,47 @@
     tools:context=".BlankFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="123dp"
+        android:layout_height="88dp"
+        android:layout_gravity="bottom|start"
+        android:text="Кнопка 3" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="123dp"
+        android:layout_height="88dp"
+        android:layout_gravity="center|start"
+        android:text="Кнопка 2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="123dp"
+        android:layout_height="88dp"
+        android:layout_gravity="start|top"
+        android:text="Кнопка 1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text="TextView" />
 </FrameLayout>
