@@ -82,9 +82,9 @@ public class BlankFragment extends Fragment implements View.OnClickListener {
 
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.button3:txt1.setText("Нажата кнопка 1");break;
-            case R.id.button4:txt2.setText("Нажата кнопка 2");break;
-            case R.id.button:txt3.setText("Нажата кнопка 3");break;
+            case R.id.button3:txt1.setText("Нажата кнопка 1");Toast.makeText(getActivity(),"Нажата кнопка 1",Toast.LENGTH_LONG).show();break;
+            case R.id.button4:txt2.setText("Нажата кнопка 2");Toast.makeText(getActivity(),"Нажата кнопка 2",Toast.LENGTH_LONG).show();break;
+            case R.id.button:txt3.setText("Нажата кнопка 3");Toast.makeText(getActivity(),"Нажата кнопка 3",Toast.LENGTH_LONG).show();break;
         }
     }
 }
