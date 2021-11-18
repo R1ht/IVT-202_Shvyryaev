@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.TextView;
 
 /**
@@ -15,7 +16,7 @@ import android.widget.TextView;
  * Use the {@link BlankFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlankFragment extends Fragment {
+public class BlankFragment extends Fragment implements View.OnClickListener {
     TextView txt1,txt2,txt3;
     Button btn1,btn2,btn3;
 
@@ -27,6 +28,7 @@ public class BlankFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     public BlankFragment() {
         // Required empty public constructor
@@ -50,46 +52,39 @@ public class BlankFragment extends Fragment {
         return fragment;
     }
 
-    @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
+
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        txt1 = (TextView) getActivity().findViewById(R.id.textView);
-        txt2 = (TextView) getActivity().findViewById(R.id.textView1);
-        txt3 = (TextView) getActivity().findViewById(R.id.textView2);
-        btn1 = (Button) getActivity().findViewById(R.id.button3);
-        btn2 = (Button) getActivity().findViewById(R.id.button4);
-        btn3 = (Button) getActivity().findViewById(R.id.button);
 
-        View.OnClickListener oclBtn1 = v -> {
-            // Меняем текст в TextView (tvOut)
-            txt1.setText("Нажата кнопка 1");
-        };
-        btn1.setOnClickListener(oclBtn1);
-
-        View.OnClickListener oclBtn2 = v -> {
-            // Меняем текст в TextView (tvOut)
-            txt2.setText("Нажата кнопка 2");
-        };
-        btn2.setOnClickListener(oclBtn2);
-
-        View.OnClickListener oclBtn3 = v -> {
-            // Меняем текст в TextView (tvOut)
-            txt3.setText("Нажата кнопка 3");
-        };
-        btn3.setOnClickListener(oclBtn3);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_blank, container, false);
+        btn1 = (Button) v.findViewById(R.id.button3);
+        txt1 = (TextView) v.findViewById(R.id.textView);
+        btn2 = (Button) v.findViewById(R.id.button4);
+        txt2 = (TextView) v.findViewById(R.id.textView1);
+        btn3 = (Button) v.findViewById(R.id.button);
+        txt3 = (TextView) v.findViewById(R.id.textView2);
+        btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
+        btn3.setOnClickListener(this);
+        return v;
+    }
 
-
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button3:txt1.setText("Нажата кнопка 1");break;
+            case R.id.button4:txt2.setText("Нажата кнопка 2");break;
+            case R.id.button:txt3.setText("Нажата кнопка 3");break;
+        }
     }
 }

@@ -13,40 +13,37 @@
         android:layout_width="123dp"
         android:layout_height="88dp"
         android:layout_gravity="bottom|start"
-        android:text="Кнопка 3" />
+        android:text="@string/_3" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="123dp"
         android:layout_height="88dp"
         android:layout_gravity="center|start"
-        android:text="Кнопка 2" />
+        android:text="@string/_2" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="123dp"
         android:layout_height="88dp"
         android:layout_gravity="start|top"
-        android:text="Кнопка 1" />
+        android:text="@string/_1" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|top"
-        android:text="TextView" />
+        android:layout_gravity="center|top" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="TextView" />
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:text="TextView" />
+        android:layout_gravity="center|bottom" />
 </FrameLayout>
